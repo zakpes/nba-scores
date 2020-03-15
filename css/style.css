@@ -1,0 +1,301 @@
+/* Import Google fonts
+ * ==================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Montserrat:400,700&display=swap');
+
+:root {
+	--purple: #6f42c1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar
+ * ==================================== */
+
+.navbar-brand {
+	height: auto;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+	transition: all .3s;
+}
+
+.navbar-toggle:hover .navbar-toggle .icon-bar {
+	background-color: #ccc;
+}
+
+.bar-mid-x {
+    transform: scaleX(0);
+}
+
+.bar-top-x {
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar.bar-bot-x {
+    transform: rotate(-45deg);
+	margin-top: -8px;
+    margin-bottom: 6px;
+}
+
+/* btn hover effects */
+.btn {
+	background-color: hsl(1.8, 64.7%, 50%);
+	border-color: hsl(1.8, 64.7%, 50%);
+}
+
+.btn:hover {
+	color: hsl(0, 0%, 100%) !important;
+	border-color: hsl(0, 0%, 21.2%);
+	box-shadow: inset 0 -50px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+.btn:focus, .btn:active {
+	box-shadow: inset 0 -62px 0px hsla(0, 0%, 0%, 0.5);
+	color: hsl(0, 0%, 100%) !important;
+}
+
+/* results table
+* ==================================== */
+
+#sectionResultsTable {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.data-container-wrapper {
+    position: relative;
+}
+
+.table-responsive {
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tableYesterday.hide {
+    opacity: 0;
+    transform: translate3d(-1400px, 0, 0);
+    z-index: 0;
+}
+
+#tableYesterday {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms ease-in-out;
+    z-index: 1;
+}
+
+#tableToday {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all 1000ms ease-in-out;
+    z-index: 1;
+}
+
+#tableToday.hide {
+    opacity: 0;
+    transform: translate3d(1400px, 0, 0);
+    z-index: 0;
+}
+
+.table {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px #a49e94;
+}
+
+.table:first-of-type {
+    margin-bottom: 50px;
+}
+
+.table td,
+.table th {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.date .link-prev, 
+.date .link-next {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+}
+
+.date .link-next {
+    left: initial;
+    right: 50px;
+}
+
+.date .link-prev::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid hsl(0, 0%, 100%);
+	display: block;
+	position: absolute;
+	left: -18px;
+	top: 7px;
+}
+
+.date .link-next::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid hsl(0, 0%, 100%);
+	display: block;
+	position: absolute;
+	right: -20px;
+	top: 7px;
+}
+
+.date .link-prev:hover,
+.date .link-next:hover {
+    text-decoration: underline !important;
+}
+
+.table .date {
+    background-color: #01579b;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.game-time {
+    text-align: center;
+}
+
+.team-name {
+    font-size: 18px;
+    width: 42%;
+}
+
+.team-logo {
+    width: 50px;
+}
+
+.visitor-team-logo {
+    margin-left: 5px;
+}
+
+.home-team-logo {
+    margin-right: 5px;
+}
+
+.score {
+    font-size: 30px;
+    font-weight: 600;
+    width: 8%;
+}
+
+.visitor-team-name,
+.visitor-team-score {
+    text-align: right;
+}
+
+.home-team-name,
+.home-team-score {
+    text-align: left;
+}
+
+.table .colon {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+/* MEDIA QUERIES DESKTOP-FIRST
+ * ==================================== */
+
+/* Large devices (desktops, less than 1200px) */
+@media ( max-width : 1199px ) {
+
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media ( max-width : 991px ) {
+
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media ( max-width : 767px ) {
+
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media ( max-width : 575px ) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media ( max-width : 480px ) {
+
+
+}
+
+/* Custom, iPhone Retina */
+@media (max-width : 320px) {
+
+
+}
+
+
+/* Media Queries Mobile-First
+ * ==================================== */
+
+/* Custom, iPhone Retina */
+@media ( min-width : 360px ) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media ( min-width : 481px ) {
+
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media ( min-width : 576px ) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media ( min-width : 768px ) {
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media ( min-width : 992px ) {
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media ( min-width : 1200px ) {
+
+
+}
