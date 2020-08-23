@@ -139,6 +139,7 @@ function getResults(url, container, day, btn) {
                 <td class="team-name home-team-name"><img src="img/${logoArr[responseData.data[i].home_team.id-1]}" class="team-logo home-team-logo" alt="${responseData.data[i].home_team.full_name} Logo">${responseData.data[i].home_team.full_name}</td>
             </tr>`;
             // console.log(responseData.data[i].home_team.full_name);
+
         }
 
         container.innerHTML = htmlString;
@@ -169,11 +170,35 @@ function getResults(url, container, day, btn) {
             tableToday.classList.remove("hide");
         });
 
+        // set results color
+        let visitorTeamScoreArr = document.querySelectorAll(".visitor-team-score");
+        let homeTeamScoreArr = document.querySelectorAll(".home-team-score");
+        // Set winning score color to green and losing to red
+        function setResultsColor(arrVisitor, arrHome) {
+        
+            console.log(arrVisitor.classList);
+            console.log(arrHome);
+        
+            for (let i = 0; i < arrVisitor.length; i++) {
+                if (arrVisitor[i].innerHTML > arrHome[i].innerHTML) {
+                    arrVisitor[i].style.color = "hsl(92.1, 88.7%, 38%)";
+                    arrHome[i].style.color = "hsl(356, 75%, 52.9%)";
+                } else if (arrVisitor[i].innerHTML < arrHome[i].innerHTML) {
+                    arrVisitor[i].style.color = "hsl(356, 75%, 52.9%)";
+                    arrHome[i].style.color = "hsl(92.1, 88.7%, 38%)";
+                } else if (arrVisitor[i].innerHTML == arrHome[i].innerHTML) {
+                    arrVisitor[i].style.color = "hsl(210, 10.8%, 14.5%)";
+                    arrHome[i].style.color = "hsl(210, 10.8%, 14.5%)";
+                }
+            }
+        }
+        setResultsColor(visitorTeamScoreArr, homeTeamScoreArr);
     })
     .catch(error => {
         console.error("Error:", error)
     });
 }
+
 
 
 getResults(urlToday, containerToday, today, '<a id="btnPrev" class="link link-prev">Previous Day</a>');
