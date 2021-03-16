@@ -28,8 +28,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
-const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=2019&dates[]=" + fullDate(yesterday);
-const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=2019&dates[]=" + fullDate(today);
+const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=2020&dates[]=" + fullDate(yesterday);
+const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=2020&dates[]=" + fullDate(today);
 console.log(urlToday);
 console.log(fullDate(today));
 
@@ -180,13 +180,13 @@ function getResults(url, container, day, btn) {
             console.log(arrHome);
         
             for (let i = 0; i < arrVisitor.length; i++) {
-                if (arrVisitor[i].innerHTML > arrHome[i].innerHTML) {
+                if (parseInt(arrVisitor[i].innerHTML) > parseInt(arrHome[i].innerHTML)) {
                     arrVisitor[i].style.color = "hsl(92.1, 88.7%, 38%)";
                     arrHome[i].style.color = "hsl(356, 75%, 52.9%)";
-                } else if (arrVisitor[i].innerHTML < arrHome[i].innerHTML) {
+                } else if (parseInt(arrVisitor[i].innerHTML) < parseInt(arrHome[i].innerHTML)) {
                     arrVisitor[i].style.color = "hsl(356, 75%, 52.9%)";
                     arrHome[i].style.color = "hsl(92.1, 88.7%, 38%)";
-                } else if (arrVisitor[i].innerHTML == arrHome[i].innerHTML) {
+                } else if (parseInt(arrVisitor[i].innerHTML) == parseInt(arrHome[i].innerHTML)) {
                     arrVisitor[i].style.color = "hsl(210, 10.8%, 14.5%)";
                     arrHome[i].style.color = "hsl(210, 10.8%, 14.5%)";
                 }
