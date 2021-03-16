@@ -176,8 +176,14 @@ body {
     text-align: center;
 }
 
-.game-time {
+.table .game-time {
     text-align: center;
+    border-top: 0;
+    background-color: #ECEFF1;
+}
+
+.table td {
+    border-top: 0;
 }
 
 .team-name {
