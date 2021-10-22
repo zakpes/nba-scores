@@ -1,8 +1,11 @@
+const today = new Date();
+const nextYear = today.getFullYear() + 1;
+
 const getData = async function() {
     const containerEast = document.querySelector(".standings-table-east");
     const containerWest = document.querySelector(".standings-table-west");
-    const url = "https://api.sportsdata.io/v3/nba/scores/json/Standings/2021?key=5a44027feee84914b126350cc82ed893";
-
+    const url = "https://api.sportsdata.io/v3/nba/scores/json/Standings/" + nextYear + "?key=5a44027feee84914b126350cc82ed893";
+console.log("next year: "+nextYear);
     try {
         // Send request
         const response = await fetch(url);

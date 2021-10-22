@@ -2,6 +2,7 @@
 const today = new Date();
 const yesterday = new Date(today);
 yesterday.setDate(today.getDate() - 1);
+const currentYear = today.getFullYear();
 
 // const zeroMonth = ('0' + day.getMonth()).slice(-2);
 // const zeroDate = ('0' + day.getDate()).slice(-2);
@@ -28,8 +29,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
-const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=2021&dates[]=" + fullDate(yesterday);
-const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=2021&dates[]=" + fullDate(today);
+const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentYear + "&dates[]=" + fullDate(yesterday);
+const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentYear + "&dates[]=" + fullDate(today);
 console.log(urlToday);
 console.log(fullDate(today));
 
