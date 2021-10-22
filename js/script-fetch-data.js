@@ -28,8 +28,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
-const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=2020&dates[]=" + fullDate(yesterday);
-const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=2020&dates[]=" + fullDate(today);
+const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=2021&dates[]=" + fullDate(yesterday);
+const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=2021&dates[]=" + fullDate(today);
 console.log(urlToday);
 console.log(fullDate(today));
 
