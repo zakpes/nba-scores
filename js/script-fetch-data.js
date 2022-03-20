@@ -1,8 +1,18 @@
 
 const today = new Date();
 const yesterday = new Date(today);
+const month = today.getMonth() + 1;
 yesterday.setDate(today.getDate() - 1);
 const currentYear = today.getFullYear();
+let currentSeason;
+
+if (month < 11) {
+    currentSeason = currentYear - 1;
+} else {
+    currentSeason = currentYear;
+}
+
+console.log({month});
 
 // const zeroMonth = ('0' + day.getMonth()).slice(-2);
 // const zeroDate = ('0' + day.getDate()).slice(-2);
@@ -29,8 +39,8 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
-const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentYear + "&dates[]=" + fullDate(yesterday);
-const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentYear + "&dates[]=" + fullDate(today);
+const urlYesterday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentSeason + "&dates[]=" + fullDate(yesterday);
+const urlToday = "https://www.balldontlie.io/api/v1/games?seasons[]=" + currentSeason + "&dates[]=" + fullDate(today);
 console.log(urlToday);
 console.log(fullDate(today));
 
@@ -64,6 +74,7 @@ function getResults(url, container, day, btn) {
 
     })
     .then(response => {
+        console.log(response);
         return response.json();
     })
     .then(responseData => {
