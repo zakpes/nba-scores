@@ -275,63 +275,65 @@ body {
 /* Small devices (landscape phones, less than 768px) */
 @media ( max-width : 767px ) {
 
+    .table td, .table th {
+        padding: 10px;
+    }
 
-}
+    .table .date {
+        font-size: 16px;
+        text-align: left;
+        padding-left: 15px;
+    }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media ( max-width : 575px ) {
+    .date .link-next,
+    .date .link-prev {
+        left: auto;
+        right: 37px;
+    }
 
+    .date .link-prev {
+        right: 25px;
+    }
 
-}
+    .date .link-next::after {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid #fff;
+        right: -13px;
+    }
 
-/* Extra Small Devices, Phones */
-@media ( max-width : 480px ) {
+    .date .link-prev::before {
+        border-top:6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-right: 6px solid hsl(0, 0%, 100%);
+        left: -12px;
+    }
 
+    .team-name {
+        font-size: 12px;
+        font-weight: 700;
+    }
 
-}
+    .visitor-team-name, .visitor-team-score,
+    .home-team-name, .home-team-score {
+        text-align: center;
+    }
 
-/* Custom, iPhone Retina */
-@media (max-width : 320px) {
+    .visitor-team-logo {
+        margin-left: 0;
+    }
 
+    .home-team-logo {
+        margin-right: 0;
+    }
 
-}
+    .visitor-team-logo,
+    .home-team-logo {
+        display: block;
+        margin: 0 auto;
+    }
 
-
-/* Media Queries Mobile-First
- * ==================================== */
-
-/* Custom, iPhone Retina */
-@media ( min-width : 360px ) {
-
-
-}
-
-/* Extra Small Devices, Phones */
-@media ( min-width : 481px ) {
-
-
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media ( min-width : 576px ) {
-
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media ( min-width : 768px ) {
-
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media ( min-width : 992px ) {
-
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media ( min-width : 1200px ) {
-
-
+    .score {
+        font-size: 20px;
+    }
 }

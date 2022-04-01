@@ -143,7 +143,7 @@ function getResults(url, container, day, btn) {
                 <td class="game-time" colspan="5">${responseData.data[i].status}</td>
             </tr>
             <tr>
-                <td class="team-name visitor-team-name">${responseData.data[i].visitor_team.full_name}<img src="img/${logoArr[responseData.data[i].visitor_team.id-1]}" class="team-logo visitor-team-logo" alt="${responseData.data[i].visitor_team.full_name} Logo"></td>
+                <td class="team-name visitor-team-name"><span>${responseData.data[i].visitor_team.full_name}</span><img src="img/${logoArr[responseData.data[i].visitor_team.id-1]}" class="team-logo visitor-team-logo" alt="${responseData.data[i].visitor_team.full_name} Logo"></td>
                 
                 <td class="score visitor-team-score">${responseData.data[i].visitor_team_score}</td>
                 <td class="colon">:</td>

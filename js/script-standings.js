@@ -22,8 +22,8 @@ console.log("next year: "+nextYear);
 
             let htmlStringEast = 
                 `<thead>
-                    <tr class="date">
-                        <td colspan="6">Eastern Conference</td>
+                    <tr>
+                        <td colspan="6" class="date">Eastern Conference</td>
                     </tr>
                     <tr class="date">
                         <td>Rank</td>
@@ -36,8 +36,8 @@ console.log("next year: "+nextYear);
                 </thead>`;
             let htmlStringWest = 
                 `<thead>
-                    <tr class="date">
-                        <td colspan="6">Western Conference</td>
+                    <tr>
+                        <td colspan="6" class="date">Western Conference</td>
                     </tr>
                     <tr class="date">
                         <td>Rank</td>
