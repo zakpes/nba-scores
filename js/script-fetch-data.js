@@ -193,11 +193,13 @@ function getResults(url, container, day, btn) {
         
             for (let i = 0; i < arrVisitor.length; i++) {
                 if (parseInt(arrVisitor[i].innerHTML) > parseInt(arrHome[i].innerHTML)) {
-                    arrVisitor[i].style.color = "#4CAF50";
+                    // arrVisitor[i].style.color = "#4CAF50";
+                    arrVisitor[i].style.color = "#43A047";
                     arrHome[i].style.color = "#F44336";
                 } else if (parseInt(arrVisitor[i].innerHTML) < parseInt(arrHome[i].innerHTML)) {
                     arrVisitor[i].style.color = "#F44336";
-                    arrHome[i].style.color = "#4CAF50";
+                    // arrHome[i].style.color = "#4CAF50";
+                    arrHome[i].style.color = "#43A047";
                 } else if (parseInt(arrVisitor[i].innerHTML) == parseInt(arrHome[i].innerHTML)) {
                     arrVisitor[i].style.color = "hsl(210, 10.8%, 14.5%)";
                     arrHome[i].style.color = "hsl(210, 10.8%, 14.5%)";

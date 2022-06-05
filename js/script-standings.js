@@ -31,7 +31,7 @@ console.log("next year: "+nextYear);
                         <td>Win</td>
                         <td>Loss</td>
                         <td>Percentage</td>
-                        <td>Last Ten</td>
+                        <td class="last-ten">Last Ten</td>
                     </tr>
                 </thead>`;
             let htmlStringWest = 
@@ -45,7 +45,7 @@ console.log("next year: "+nextYear);
                         <td>Win</td>
                         <td>Loss</td>
                         <td>Percentage</td>
-                        <td>Last Ten</td>
+                        <td class="last-ten">Last Ten</td>
                     </tr>
                 </thead>`;
             let j = 1;

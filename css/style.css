@@ -65,6 +65,41 @@ body {
 	color: hsl(0, 0%, 100%) !important;
 }
 
+/* navbar */
+.nav-menu {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.nav-link {
+    padding: 0 16px;
+}
+
+.nav-link a {
+	color: #01579b;
+	font-weight: 700;
+	text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: all 280ms ease;
+}
+
+.nav-link a.active,
+.nav-link a:hover {
+    border-bottom-color: #01579b;
+    text-decoration: none;
+}
+
 /* results table
 * ==================================== */
 
@@ -257,6 +292,10 @@ body {
 	margin-right: 6px;
 }
 
+.last-ten {
+    white-space: nowrap;
+}
+
 /* MEDIA QUERIES DESKTOP-FIRST
  * ==================================== */
 
@@ -334,6 +373,28 @@ body {
     }
 
     .score {
-        font-size: 20px;
+        font-size: 26px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .table .colon {
+        padding: 10px 4px;
+        font-size: 26px;
+    }
+
+    /* standings table */
+    .standings-table td {
+        font-size: 16px;
+    }
+
+    .standings-table .team-logo {
+        margin-right: auto;
+    }
+
+    .standings-table td.team-name {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
     }
 }
